@@ -17,7 +17,7 @@ int _abs(int n)
 			{
 				_putchar(p);
 			}
-		}	
+		}
 	}
 	else if (n < 0)
 	{
@@ -25,7 +25,7 @@ int _abs(int n)
 		{
 			if (p == n)
 			{
-				_putchar(p)
+				_putchar(p);
 			}
 		}
 	}
