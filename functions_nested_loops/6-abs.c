@@ -7,28 +7,10 @@
  */
 int _abs(int n)
 {
-	int p;
-
-	if (n > 0)
+	if (n >= 0)
 	{
-		for (p = 0; p <= n; p++)
-		{
-			if (p == n)
-			{
-				_putchar(p);
-			}
-		}
+		return (n);
 	}
-	else if (n < 0)
-	{
-		for (p = 0; p >= n; p--)
-		{
-			if (p == n)
-			{
-				_putchar(p);
-			}
-		}
-	}
-
-	return (0);
+	else
+		return (-n);
 }
