@@ -3,7 +3,9 @@
  * print_sign - finds if n is >, <, or == 0
  * @n: the paramiter passed in
  *
- * Return: 1 if n > 0 prints '+', 0 if n == 0 prints '0', if -1 < 0 prints '-'
+ * Return: 1 if n > 0; prints '+'
+ * 	   0 if n == 0; prints '0'
+ * 	  -1 if n < 0; prints '-'
  */
 int print_sign(int n)
 {
