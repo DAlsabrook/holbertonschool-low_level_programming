@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 /**
  * _abs - give absolute value
  * @n: number passed in
