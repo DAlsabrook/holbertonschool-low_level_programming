@@ -3,20 +3,22 @@
  * print_sign - finds if n is >, <, or == 0
  * @n: the paramiter passed in
  *
- * Return: 1 if n > 0; prints '+', 0 if n == 0; prints '0', -1 if n < 0; prints '-'
+ * Return: 1 if > 0 print'+'
+ *	0 if = 0 print'0'
+ *	-1 if < 0 print'-'
  */
 int print_sign(int n)
 {
 	if (n > 0)
 	{
-	 	_putchar('+');
+		_putchar('+');
 		return (1);
 	}
 	else if (n == 0)
-        {
-                _putchar('0');
-                return (0);
-        }
+	{
+		_putchar('0');
+		return (0);
+	}
 	else
 	{
 		_putchar('-');
