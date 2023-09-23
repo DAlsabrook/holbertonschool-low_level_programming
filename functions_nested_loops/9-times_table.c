@@ -11,23 +11,24 @@ void times_table(void)
 
 	for (x = 0; x <= 9; x++)
 	{
+		_putchar('0');
+
 		for (y = 0; y <= 9; y++)
 		{
 			int ans = x * y;
 
+			_putchar(',');
+			_putchar(' ');
+
 			if ( ans > 9 )
 			{
 				_putchar(ans / 10 + '0');
-				_putchar(ans % 10 + '0');
-				_putchar(',');
 			}
 			else
 			{
-				_putchar(ans % 10 + '0');
-				_putchar(',');
 				_putchar(' ');
 			}
-			_putchar(' ');
+			_putchar(ans % 10 + '0');
 		}
 		_putchar('\n');
 	}
