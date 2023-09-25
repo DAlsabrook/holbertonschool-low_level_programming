@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdlib>
+#include <stdlib.h>
 /**
  * print_to_98 - prints all ints from given number to 98
  * @n: the number given to start the count
