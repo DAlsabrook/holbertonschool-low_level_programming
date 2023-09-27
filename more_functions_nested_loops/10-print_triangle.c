@@ -21,7 +21,7 @@ void print_triangle(int size)
 				{
 					_putchar(' ');
 				}
-				for (pound = ((w - w) + 1); pound <= w: pound++)
+				for (pound = ((w - w) + 1); pound <= w; pound++)
 				{
 					_putchar('#');
 				}
