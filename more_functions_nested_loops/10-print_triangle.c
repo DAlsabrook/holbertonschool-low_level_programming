@@ -8,18 +8,18 @@
 void print_triangle(int size)
 {
 	int h;
-	int w;
+	int c;
 
 	if (size > 0)
 	{
 		for (h = 0; h < size; h++)
 		{
-			for (w = size - h; w > 0; w--)
+			for (c = size - h; c > 0; c--)
 			{
 				_putchar(' ');
 			}
 
-			for (w = 0; w < size; w++)
+			for (c = (h - h) + 1; c < size; c++)
 			{
 				_putchar('#');
 			}
