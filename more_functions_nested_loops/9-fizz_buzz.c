@@ -3,7 +3,7 @@
 /**
  * main - number divisible by 3 prints fizz, divisible by prints buzz
  *
- * return: 0
+ * Return: 0
  */
 int main(void)
 {
