@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * print_triangle - prints triangle
+ * @size: size of triangle
  *
  * Return: void
  */
@@ -15,19 +16,21 @@ void print_triangle(int size)
 	{
 		for (h = 0; h < size; h++)
 		{
-			for(w = 0; w < size; w++)
+			for (w = size - h; w > 0; w--)
 			{
-				for (space = (w - 1); space <= w; space--)
-				{
-					_putchar(' ');
-				}
-				for (pound = ((w - w) + 1); pound <= w; pound++)
-				{
-					_putchar('#');
-				}
+				_putchar(' ');
 			}
+
+			for (w = 0; w < size; w++)
+			{
+				_putchar('#');
+			}
+
+			if (h == size)
+				break;
+
 			_putchar('\n');
-		}	
+		}
 	}
 	else if (size <= 0)
 	{
