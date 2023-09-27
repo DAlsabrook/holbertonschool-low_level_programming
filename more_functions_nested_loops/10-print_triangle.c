@@ -9,8 +9,6 @@ void print_triangle(int size)
 {
 	int h;
 	int w;
-	int space;
-	int pound;
 
 	if (size > 0)
 	{
