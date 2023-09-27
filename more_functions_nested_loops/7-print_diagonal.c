@@ -20,6 +20,7 @@ void print_diagonal(int n)
 				s++;
 			}
 		_putchar('/');
+		_putchar('\n');
 		}
 	}
 	_putchar('\n');
