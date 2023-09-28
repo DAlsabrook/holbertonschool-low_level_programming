@@ -9,7 +9,6 @@ int _strlen(char *s)
 {
 	int i;
 
-:x
 	{
 		continue;
 	}
