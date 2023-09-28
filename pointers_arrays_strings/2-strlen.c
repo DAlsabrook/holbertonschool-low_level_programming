@@ -11,7 +11,10 @@ int _strlen(char *s)
 
 	for (i = 0; i <= *s; i++)
 	{
-		_putchar(i + '0');
+		if (i == *s)
+		{
+			_putchar(i + '0');
+		}
 	}
 
 	return (0);
