@@ -15,6 +15,10 @@ int _strlen(char *s)
 		{
 			_putchar(*s);
 		}
+		else if (*s == "")
+		{
+			_putchar('0');
+		}
 	}
 
 	return (0);
