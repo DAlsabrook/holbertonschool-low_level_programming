@@ -19,7 +19,9 @@ void rev_string(char *s)
 
 	for (c = 0; c >= j; c++)
 	{
-		*s[c] = temp[i];
+		s[c] = temp[i];
 		i--;
+		_putchar(s[c]);
 	}
+
 }
