@@ -1,5 +1,4 @@
 #include "main.h"
-#include "2-strlen.c"
 /**
  * puts2 - prints everyother char of string
  * @str: string to use
@@ -10,7 +9,7 @@ void puts2(char *str)
 {
 	int i;
 
-	for (i = 0; i >= 20; i++)
+	for (i = 0; i <= 20; i++)
 	{
 		_putchar(str[i]);
 	}
