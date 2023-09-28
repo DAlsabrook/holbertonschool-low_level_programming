@@ -1,4 +1,5 @@
 #include "main.h"
+#include "2-strlen.c"
 /**
  * rev_string - returns reversed string
  * @s: string to be reversed
@@ -7,20 +8,15 @@
  */
 void rev_string(char *s)
 {
-	int i, c, j;
-	char temp[10000];
+	int i;
+	int len = _strlen(s) - 1;
+	char tmp;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; i < len / 2; i++)
 	{
-		temp[i] = s[i];
-	}
-
-	j = i;
-
-	for (c = 0; c >= j; c++)
-	{
-		*s[c] = temp[i];
-		i--;
+		tmp = s[i];
+		s[i] = s[len];
+		s[len] = tmp;
 	}
 
 }
