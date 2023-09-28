@@ -15,9 +15,10 @@ void rev_string(char *s)
 	}
 	for (c = 0; c < i / 2; c++)
 	{
-		_putchar(c);
 		temp = s[i];
 		s[i] = s[c - i - 1];
 		s[c - i - 1] = temp;
+
+		i--;
 	}
 }
