@@ -9,7 +9,7 @@
  *
  * Return: numbers fo the string. If no num return 0
  */
-in _atoi(char *s)
+int _atoi(char *s)
 {
 	int result = 0;
 	int sign = 1;
@@ -30,7 +30,7 @@ in _atoi(char *s)
 		{
 			return (CUSTOM_INT_MAX);
 		}
-		else if (sing == -1 && (result < (CUSTOM_INT_MIN + digit) / 10))
+		else if (sign == -1 && (result < (CUSTOM_INT_MIN + digit) / 10))
 		{
 			return (CUSTOM_INT_MIN);
 		}
