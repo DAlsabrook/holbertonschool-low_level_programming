@@ -2,8 +2,8 @@
 #include "2-strlen.c"
 /**
  * _strcat - concats two strings
- * dest - where is concats to
- * src - source strings
+ * dest: where is concats to
+ * src: source strings
  *
  * Return: pointer to resulting string
  */
