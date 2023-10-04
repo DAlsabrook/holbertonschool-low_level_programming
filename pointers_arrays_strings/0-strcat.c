@@ -18,4 +18,6 @@ char *_strcat(char *dest, char *src)
 		dest[dlen] = src[i];
 		dlen++;
 	}
+
+	return (dest);
 }
