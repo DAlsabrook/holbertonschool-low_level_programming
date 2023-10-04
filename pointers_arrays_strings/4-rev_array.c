@@ -13,7 +13,7 @@ void reverse_array(int *a, int n)
 	int i;
 	int a_end;
 
-	for (a_len = 0; a_len != '0'; a_len++)
+	for (a_len = 0; a_len != '\0'; a_len++)
 	{
 		continue;
 	}
