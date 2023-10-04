@@ -9,8 +9,14 @@
  */
 void reverse_array(int *a, int n)
 {
-	int i, j, k;
-	int tmp[100];
+	int i, j, k, l;
+
+	for (l = 0; l != '\0'; l++)
+	{
+		continue;
+	}
+
+	int tmp[l];
 
 	for (j = 0; j < n; j++)
 	{
