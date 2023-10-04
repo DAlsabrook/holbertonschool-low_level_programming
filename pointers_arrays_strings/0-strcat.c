@@ -9,8 +9,8 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int dlen = _strlen(*dest);
-	int slen = _strlen(*src);
+	int dlen = _strlen(dest);
+	int slen = _strlen(src);
 	int i;
 
 	for (i = 0; i < slen; i++)
