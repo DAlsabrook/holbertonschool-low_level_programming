@@ -17,6 +17,10 @@ char *cap_string(char *c)
 			{
 				c[i] = c[i] - 32;
 			}
+			else if (c[i] - 1 == ' ')
+			{
+				c[i] = c[i] - 32;
+			}
 		}
 	}
 
