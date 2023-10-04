@@ -18,11 +18,11 @@ void reverse_array(int *a, int n)
 		continue;
 	}
 
-	a_end = a_len;
+	a_end = a_len - 1;
 
 	for (i = 0; i < a_len / 2 && i < n; i++)
 	{
 		a[i] = a[a_end];
-		a_end++;
+		a_end--;
 	}
 }
