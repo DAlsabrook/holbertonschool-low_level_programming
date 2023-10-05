@@ -23,6 +23,7 @@ char *leet(char *c)
 			{
 				j++;
 				c[i] = let[j];
+				j--:
 			}
 		}
 	}
