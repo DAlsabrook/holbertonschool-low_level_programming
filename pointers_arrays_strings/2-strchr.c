@@ -24,6 +24,6 @@ char *_strchar(char *s, char c)
 	{
 		return (s[i]);
 	}
-	else 
-		return;
+	else
+		return NULL;
 }
