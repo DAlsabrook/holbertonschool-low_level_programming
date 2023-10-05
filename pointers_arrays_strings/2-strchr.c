@@ -9,14 +9,21 @@
 char *_strchar(char *s, char c)
 {
 	int i;
-	char *first;
+	int found = 0;
+
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == c)
 		{
-			first = s[i];
+			found++;
+			break;
 		}
 	}
-
-	return(first);
+	
+	if (found == 1)
+	{
+		return (s[i]);
+	}
+	else 
+		return;
 }
