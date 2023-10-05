@@ -23,7 +23,7 @@ char *_strchar(char *s, char c)
 	
 	if (found == 1)
 	{
-		return (s[i]);
+		return (*s[i]);
 	}
 	else
 		return (NULL);
