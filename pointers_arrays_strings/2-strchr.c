@@ -9,7 +9,7 @@
  */
 char *_strchar(char *s, char c)
 {
-	int i;
+	unsigned int i;
 	int found = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
