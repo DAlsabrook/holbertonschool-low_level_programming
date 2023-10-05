@@ -8,7 +8,7 @@
 char *leet(char *c)
 {
 	int i;
-	char j;
+	int j;
 	int let[20] = {'a', '4', 'A', '4',
 		'e', '3', 'E', '3',
 		'o', '0', 'O', '0',
