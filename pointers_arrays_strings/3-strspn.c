@@ -11,6 +11,7 @@ unsigned int _strspn(char *s, char *accept)
 	int i, j;
 	unsigned int count = 0;
 	int no_match = 0;
+
 	for (i = 0; s[i]; i++)
 	{
 		if (no_match == 1)
@@ -25,7 +26,7 @@ unsigned int _strspn(char *s, char *accept)
 				count++;
 				break;
 			}
-			else
+			else if (s[i] != accept[j])
 			{
 				no_match++;
 			}
