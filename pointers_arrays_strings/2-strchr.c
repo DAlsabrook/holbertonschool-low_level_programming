@@ -11,21 +11,21 @@ char *_strchar(char *s, char c)
 {
 	int i;
 	int found = 0;
-	char c;
+	char ans;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == c)
 		{
 			found++;
-			c = i + '0';
+			ans = i + '0';
 			break;
 		}
 	}
 	
 	if (found == 1)
 	{
-		return (char *)s[c];
+		return (char *)s[ans];
 	}
 	else
 		return (NULL);
