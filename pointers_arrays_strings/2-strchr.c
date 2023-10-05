@@ -10,21 +10,14 @@
 char *_strchr(char *s, char c)
 {
 	int i;
-	int found = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == c)
 		{
-			found++;
-			break;
+			return (char *) s + i;
 		}
 	}
-	
-	if (found == 1)
-	{
-		return (char *) s+i;
-	}
-	else
-		return (NULL);
+
+	return (NULL);
 }
