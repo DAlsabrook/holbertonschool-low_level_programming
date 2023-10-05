@@ -11,7 +11,6 @@ char *_strchar(char *s, char c)
 {
 	int i;
 	int found = 0;
-	int * nulla = NULL;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -27,5 +26,5 @@ char *_strchar(char *s, char c)
 		return (s[i]);
 	}
 	else
-		return (nulla);
+		return (NULL);
 }
