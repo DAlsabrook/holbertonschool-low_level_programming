@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * leet - turn string to 1337
- * @c - string passed in
+ * @c: string passed in
  *
  * Return: new string
  */
