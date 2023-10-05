@@ -17,13 +17,12 @@ char *leet(char *c)
 
 	for (i = 0; c[i] != '\0'; i++)
 	{
-		for (j = 0; let[j] == c[i]; j++)
+		for (j = 0; j <= 20; j++)
 		{
 			if (c[i] == let[j])
 			{
 				j++;
 				c[i] = let[j];
-				j--;
 			}
 		}
 	}
