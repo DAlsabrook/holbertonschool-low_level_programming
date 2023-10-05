@@ -8,28 +8,21 @@
 char *leet(char *c)
 {
 	int i;
+	char j;
+	int let[10] = {'a', '4', 'A', '4',
+		'e', '3', 'E', '3',
+		'o', '0', 'O', '0',
+		't', '7', 'T', '7',
+		'l', '1', 'L', '1'};
 
 	for (i = 0; c[i] != '\0'; i++)
 	{
-		if (c[i] == 'a' || 'A')
+		for (j = 0; let[j] == c[i]; j++)
 		{
-			c[i] = '4';
-		}
-		else if (c[i] == 'e' || 'E')
-		{
-			c[i] = '3';
-		}
-		else if (c[i] == 'o' || 'O')
-		{
-			c[i] = '0';
-		}
-		else if (c[i] == 't' || 'T')
-		{
-			c[i] = '7';
-		}
-		else if (c[i] == 'l' || 'L')
-		{
-			c[i] = '1';
+			if (c[i] == let[j])
+			{
+				c[i] = let[j + 1];
+			}
 		}
 	}
 
