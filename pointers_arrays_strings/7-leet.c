@@ -21,7 +21,8 @@ char *leet(char *c)
 		{
 			if (c[i] == let[j])
 			{
-				c[i] = let[j + 1];
+				j++;
+				c[i] = let[j];
 			}
 		}
 	}
