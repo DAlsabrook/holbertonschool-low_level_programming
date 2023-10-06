@@ -9,24 +9,23 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int row, count;
-	int down;
-	
-	down = 0;
-	count = 1;
+        int row, count;
+        int down;
 
-	for (row = 0; row <= size * 2; row++)
-	{
-		if (count % size == 0)
-		{
-			down += a[row - (size + 1)];
-		}
-		else if (row == 0)
-		{
-			down += a[0];
-		}
-		count++;
-	}
-	
-	printf("%d, ", down);
+        down = 0;
+        count = 1;
+
+        for (row = 0; row <= size * size; row++)
+        {
+                if (row % size == 0 && row != 0)
+                {
+                        down += a[row + count];
+                        count++;
+                }
+                else if (row == 0)
+                {
+                        down += a[0];
+                }
+        }
+        printf("%d, ", down);
 }
