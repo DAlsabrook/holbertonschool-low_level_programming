@@ -21,7 +21,7 @@ void print_diagsums(int *a, int size)
 		{
 			if (column == count)
 			{
-				nums[column] = &a[row][column];
+				nums[column] = a[row][column];
 			}
 		}
 		count++;
