@@ -19,7 +19,7 @@ char *_strstr(char *haystack, char *needle)
 		{
 			if (haystack[i] == needle[l])
 			{
-				for (k = i, l = j; (haystack[k] == needle[l]) && (needle[l] != '\0'); k++ && l++)
+				for (k = i, l = j; (haystack[k] == needle[l]) && (needle[l] != '\0'); k++, l++)
 				{
 					count += 1;
 				}
