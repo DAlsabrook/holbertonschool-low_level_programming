@@ -9,16 +9,16 @@
  */
 void print_diagsums(int *a, int size)
 {
-        int row;
-        int down, up;
+	int row;
+	int down, up;
 
-        down = 0;
-        up = 0;
+	down = 0;
+	up = 0;
 
-        for (row = 0; row < size; row++)
-        {
+	for (row = 0; row < size; row++)
+	{
 		down += a[(size * row) + row];
 		up += a[(size * (row + 1) - (row + 1))];
-        }
-        printf("%d, %d\n", down, up);
+	}
+	printf("%d, %d\n", down, up);
 }
