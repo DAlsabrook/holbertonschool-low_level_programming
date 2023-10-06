@@ -19,10 +19,10 @@ char *_strstr(char *haystack, char *needle)
 				       	&& (haystack[i + 1] == needle[j + 1])
 				       	&& (haystack[i + 2] == needle[j + 2]))
 			{
-				return ((char *) haystack + i);
+				return (&haystack[i]);
 			}
 		}
 	}
 
-	return ((char *) haystack);
+	return (NULL);
 }
