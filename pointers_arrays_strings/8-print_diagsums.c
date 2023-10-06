@@ -9,30 +9,20 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int row, column, count, sumDown, i;
-	int nums[20];
-	
-	count = 0;
-	sumDown = 0;
+	int row, i;
+	int down;
+	int up;
 
-	for (row = 0; row <= size; row++)
+	count = 1;
+
+	for (row = 0; row <= size * 2; row++)
 	{
-		for (column = 0; column <= size; column++)
+		if (count % size = 0 || row == 0)
 		{
-			if (column == count)
-			{
-				nums[column] = a[column];
-			}
+			down += a[row - (size + 1)];
 		}
 		count++;
 	}
 	
-	for (i = 0; i <= size; i++)
-	{
-		if (nums[i] != '\0')
-		{
-			sumDown += nums[i];
-		}
-	}
-	printf("%d, ", sumDown);
+	printf("%d, ", down);
 }
