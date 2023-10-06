@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio>
+#include <stdio.h>
 /**
  * print_diagsums - prints the diagnal s
  * @a: square array
