@@ -10,7 +10,7 @@
 void print_diagsums(int *a, int size)
 {
 	int row, column, count, sumDown, i;
-	int nums[];
+	int nums[20];
 	
 	count = 0;
 	sumDown = 0;
@@ -21,7 +21,7 @@ void print_diagsums(int *a, int size)
 		{
 			if (column == count)
 			{
-				nums[column] = a[row][column];
+				nums[column] = &a[row][column];
 			}
 		}
 		count++;
