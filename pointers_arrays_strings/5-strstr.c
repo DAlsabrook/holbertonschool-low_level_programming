@@ -19,11 +19,11 @@ char *_strstr(char *haystack, char *needle)
 		{
 			if (haystack[i] == needle[l])
 			{
-				for (k = i, l = j; (haystack[k] == needle[l]) && (needle[l] != '\0'); k++, l++)
+				for (k = i, l = j; (haystack[k] == needle[l]); k++, l++)
 				{
 					count += 1;
 				}
-				if (count == needle[l])
+				if (count >= 3)
 				{
 					return ((char *) haystack + i);
 				}
