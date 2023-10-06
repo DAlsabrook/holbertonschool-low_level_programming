@@ -9,7 +9,7 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int row, i;
+	int row, count;
 	int down;
 	int up;
 
@@ -17,9 +17,13 @@ void print_diagsums(int *a, int size)
 
 	for (row = 0; row <= size * 2; row++)
 	{
-		if (count % size = 0 || row == 0)
+		if (count % size = 0)
 		{
 			down += a[row - (size + 1)];
+		}
+		else if (row == 0)
+		{
+			down += a[0]
 		}
 		count++;
 	}
