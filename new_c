@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+echo '#include "main.h"
+/**
+ *
+ *
+ * Return:
+ */
+
+{
+ 
+}' > $1
+vi $1
