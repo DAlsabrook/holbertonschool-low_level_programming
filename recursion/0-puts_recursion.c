@@ -1,12 +1,15 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 /**
- * FUNCTION NAME - DESCRIPTION
+ * _puts_recursion - prints a string
+ * @s: string to be printed
  *
- * Return:
+ * Return: void
  */
-return function_name(input)
+void _puts_recursion(char *s)
 {
- 
+	while (s != '\0')
+	{
+		_putchar(s);
+		s++;
+	}
 }
