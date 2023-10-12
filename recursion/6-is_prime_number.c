@@ -11,7 +11,7 @@ int is_prime_number(int n)
 	{
 		return(0);
 	}
-	return (prime_time(n, 2));
+	return (prime_time(n, --n));
 }
 
 /**
@@ -23,17 +23,13 @@ int is_prime_number(int n)
  */
 int prime_time(int n, int i)
 {
-	if (n % i == 0)
-	{
-		return (0);
-	}
-	else if (n % i != 0)
-	{
-		return(prime_time(n, ++i));
-	}
-	else if (i < n)
+	if (i == 1)
 	{
 		return (1);
 	}
-	return (1);
+	else if (n % i == 0 && i > 0)
+	{
+		return (0);
+	}
+	return (prime_time(n, --i));
 }
