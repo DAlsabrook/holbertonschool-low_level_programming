@@ -1,10 +1,11 @@
 #include "main.h"
 int find_root(int num, int root);
 /**
- * _sqrt_recursion - Find squareroot
+ * _sqrt_recursion - Find square root
+ * find_root - finds sqrt
  * @n: number to find square root of
  *
- * Return: sqaureroot
+ * Return: sqaure root
  */
 int _sqrt_recursion(int n)
 {
@@ -25,5 +26,5 @@ int find_root(int num, int root)
 	{
 		return (root);
 	}
-	return(find_root(num, root - 1));
+	return (find_root(num, root - 1));
 }
