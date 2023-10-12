@@ -3,10 +3,6 @@
  * _sqrt_recursion - Find square root
  * @n: number to find square root of
  *
- * find_root - finds sqrt
- * @num: number to find sqrt in find_root
- * @root: root numbers to iterate
- *
  * Return: sqaure root
  */
 int find_root(int num, int root);
@@ -19,6 +15,13 @@ int _sqrt_recursion(int n)
 	return (find_root(n, 0));
 }
 
+/**
+ * find_root - finds sqrt
+ * @num: number to find sqrt in find_root
+ * @root: root numbers to iterate
+ *
+ * Return: square root
+ */
 int find_root(int num, int root)
 {
 	if (root * root > num)
