@@ -2,9 +2,7 @@
 /**
  * _sqrt_recursion - Find square root
  * @n: number to find square root of
-:x
-;x
-:x
+ *
  * find_root - finds sqrt
  * @num: number to find sqrt in find_root
  * @root: root numbers to iterate
