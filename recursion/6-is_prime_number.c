@@ -11,7 +11,7 @@ int is_prime_number(int n)
 	{
 		return(0);
 	}
-	return (prime_time(n, --n));
+	return (prime_time(n, n--));
 }
 
 /**
