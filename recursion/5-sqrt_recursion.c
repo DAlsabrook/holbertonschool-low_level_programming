@@ -3,6 +3,8 @@
  * _sqrt_recursion - Find square root
  * find_root - finds sqrt
  * @n: number to find square root of
+ * @num: number to find sqrt in find_root
+ * @root: root numbers to iterate
  *
  * Return: sqaure root
  */
