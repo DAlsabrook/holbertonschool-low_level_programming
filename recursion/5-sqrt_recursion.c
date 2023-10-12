@@ -1,14 +1,12 @@
 #include "main.h"
-int find_root(int num, int root);
 /**
  * _sqrt_recursion - Find square root
  * find_root - finds sqrt
  * @n: number to find square root of
- * @num: number to find sqrt
- * @root: iteration
  *
  * Return: sqaure root
  */
+int find_root(int num, int root);
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
