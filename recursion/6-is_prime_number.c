@@ -31,5 +31,9 @@ int prime_time(int n, int i)
 	{
 		return(prime_time(n, ++i));
 	}
+	else if (i < n)
+	{
+		return (1);
+	}
 	return (1);
 }
