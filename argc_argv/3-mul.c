@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 			nums = strtol(argv[i], NULL, 10);
 			result *= nums;	
 		}
-		printf("%d", result);
+		printf("%d\n", result);
 	}
 
 	return (0);
