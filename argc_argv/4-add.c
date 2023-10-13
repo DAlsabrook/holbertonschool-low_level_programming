@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 			{
 				if (isdigit(argv[i][j]))
 				{
-					count++;	
+					count++;
 				}
 			}
 			if (count == len)
