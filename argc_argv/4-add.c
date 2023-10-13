@@ -11,8 +11,9 @@
  */
 int main(int argc, char *argv[])
 {
-	int i;
+	int i, j;
 	int result = 0;
+	int count = 0;
 
 	if (argc == 1)
 	{
@@ -22,9 +23,16 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (isdigit(argv[i][0]))
+			for (j = 0; j < strlen(a[i]); j++)
 			{
-				result += atoi(argv[i]);	
+				if (isdigit(argv[i][j]) && argv[i][j] != '\0')
+				{
+					count++;	
+				}
+			}
+			if (count == strlen(a[i]))
+			{
+				result += atoi(argv[i]);
 			}
 			else
 			{
