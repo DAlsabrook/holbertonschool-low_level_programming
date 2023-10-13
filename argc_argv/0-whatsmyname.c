@@ -2,6 +2,8 @@
 #include <stdio.h>
 /**
  * main - runs the program
+ * @argc: length of argv
+ * @argv: array of arguments
  *
  * Return: name of program
  */
