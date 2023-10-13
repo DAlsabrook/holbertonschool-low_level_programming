@@ -6,16 +6,15 @@
  *
  * Return: number of arguments
  */
-int main(int argc, char *argv[])
+int main(char *argv[])
 {
 	int i;
-	
-	for (i = 0; i < argc; i++)
+
+	for (i = 0; argv[i]; i++)
 	{
 		continue;
 	}
-		printf("%d", i);
-		printf("\n");
+	printf("%d", i);
 
 	return (0);
 }
