@@ -12,9 +12,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, j, len;
+	int i, j, len, count;
 	int result = 0;
-	int count = 0;
 
 	if (argc == 1)
 	{
@@ -24,9 +23,12 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			for (j = 0, len = strlen(argv[i]) - 1; j < len; j++)
+			count = 0;
+			len = strlen(argv[i]);
+
+			for (j = 0; j < len; j++)
 			{
-				if (isdigit(argv[i][j]) && argv[i][j] != '\0')
+				if (isdigit(argv[i][j]))
 				{
 					count++;	
 				}
