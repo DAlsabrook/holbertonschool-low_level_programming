@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		for (i = 0; i < argc; i++)
+		for (i = 1; i < argc; i++)
 		{
 			nums = strtol(argv[i], NULL, 10);
 			result *= nums;	

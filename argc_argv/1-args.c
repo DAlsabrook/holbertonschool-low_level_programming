@@ -4,7 +4,7 @@
  * main - gets amount of arguments passed into it
  * @argc: count of arguments
  * @argv: array to hold arguments
- *
+vi 3	
  * Return: number of arguments
  */
 int main(int argc, char *argv[] __attribute__((unused)))
