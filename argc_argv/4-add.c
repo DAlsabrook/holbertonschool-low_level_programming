@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <string.h>
 /**
  * main - prints addition of arguments
  * @argc: count of arguments
@@ -23,7 +24,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			for (j = 0; j < strlen(a[i]); j++)
+			for (j = 0; j < strlen(argv[i]); j++)
 			{
 				if (isdigit(argv[i][j]) && argv[i][j] != '\0')
 				{
