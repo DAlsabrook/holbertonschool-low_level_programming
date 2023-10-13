@@ -31,6 +31,7 @@ int main(int argc, char *argv[])
 					count++;	
 				}
 			}
+			if (count == len)
 			{
 				result += atoi(argv[i]);
 			}
