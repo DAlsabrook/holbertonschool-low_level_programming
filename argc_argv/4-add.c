@@ -11,10 +11,9 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	int nums = 0;
 	int result = 0;
 
-	if (argc = 1)
+	if (argc == 1)
 	{
 		printf("%d\n", 0);
 	}
