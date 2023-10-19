@@ -10,7 +10,7 @@ char *_strdup(char *str)
 	int len, i;
 	char *str_cp;
 
-	if (str == NULL || str_cp == NULL)
+	if (str == NULL)
 	{
 		return (NULL);
 	}
@@ -22,6 +22,10 @@ char *_strdup(char *str)
 	
 	str_cp = malloc(sizeof(char) * len + 1);
 
+	if (str_cp == NULL)
+	{
+		return (NULL);
+	}
 	for (i = 0; i <= len; i++)
 	{
 		str_cp[i] = str[i];
