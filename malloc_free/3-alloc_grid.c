@@ -31,6 +31,13 @@ int **alloc_grid(int width, int height)
 				return (NULL);
 			}
 		}
+		for (row = 0; row < height; row++)
+		{
+			for (column = 0; column < width; column++)
+			{
+				grid[row][column] = 0;
+			}
+		}
 		return (grid);
 	}
 	else
