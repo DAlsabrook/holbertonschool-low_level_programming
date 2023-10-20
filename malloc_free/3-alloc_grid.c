@@ -29,15 +29,7 @@ int **alloc_grid(int width, int height)
 				{
 					free(grid[i]);
 				}
-				fif (!grid[row])
-                        {
-                                for (i = 0; i < row; i++)
-                                {
-                                        free(grid[i]);
-                                }
-                                free(grid);
-                                return (NULL);
-                        }ree(grid);
+				free(grid);
 				return (NULL);
 			}
 		}
