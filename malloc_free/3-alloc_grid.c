@@ -26,8 +26,18 @@ int **alloc_grid(int width, int height)
 			if (!grid[row])
 			{
 				for (i = 0; i < row; i++)
+				{
 					free(grid[i]);
-				free(grid);
+				}
+				fif (!grid[row])
+                        {
+                                for (i = 0; i < row; i++)
+                                {
+                                        free(grid[i]);
+                                }
+                                free(grid);
+                                return (NULL);
+                        }ree(grid);
 				return (NULL);
 			}
 		}
