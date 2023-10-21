@@ -12,9 +12,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int i;
 	char *new_str;
 
-	*new_str = malloc(strlen(s1) + (strlen(s2) - n));
+	*new_str = (char)malloc(strlen(s1) + (strlen(s2) - n));
 	
-	if (new_str = NULL)
+	if (new_str == NULL)
 	{
 		return (NULL);
 	}
