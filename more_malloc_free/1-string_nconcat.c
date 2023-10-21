@@ -12,6 +12,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i, j;
 	char *new_str;
 
+	if (!s1)
+		s1 = "";
+	if (!s2)
+		s2 = "";
 	if (n < strlen(s2))
 		new_str = (char *)malloc(strlen(s1) + n + 1);
 	else
