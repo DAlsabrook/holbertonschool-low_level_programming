@@ -9,7 +9,7 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i;
+	unsigned int i, j;
 	char *new_str;
 
 	new_str = (char *)malloc(strlen(s1) + (strlen(s2) - n));
@@ -24,9 +24,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		new_str[i] = s1[i];
 	}
 
-	for (; i <= n; i++)
+	for (j = 0; j <= n; j++)
 	{
 		new_str[i] = s2[i];
+		i++;
 	}
 
 	new_str[i] = '\0';
