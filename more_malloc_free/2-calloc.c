@@ -9,32 +9,18 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int i;
-	int *Iarr;
 	char *Carr;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 	Carr = malloc(nmemb * size);
-	Iarr = malloc(nmemb * size);
-	if (Iarr == NULL || Carr == NULL)
+	if (Carr == NULL)
 		return (NULL);
-	if (size == sizeof(int))
+
+	for (i = 0; i < nmemb; i++)
 	{
-		for (i = 0; i < nmemb; i++)
-		{
-			Iarr[i] = 0;
-		}
-		free(Carr);
-		return (Iarr);
+		Carr[i] = 0;
 	}
-	if (size == sizeof(char))
-	{
-		for (i = 0; i < nmemb; i++)
-		{
-			Carr[i] = 0;
-		}
-		free(Iarr);
-		return (Carr);
-	}
-	return (NULL);
+
+	return (Carr);
 }
