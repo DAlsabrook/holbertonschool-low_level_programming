@@ -25,7 +25,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 			Iarr[i] = 0;
 		}
 		free(Carr);
-		return (*Iarr);
+		return (Iarr);
 	}
 	if (size == sizeof(char))
 	{
@@ -34,7 +34,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 			Carr[i] = 0;
 		}
 		free(Iarr);
-		return (*Carr[i]);
+		return (Carr);
 	}
 	return (NULL);
 }
