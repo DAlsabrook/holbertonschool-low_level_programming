@@ -14,7 +14,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	Carr = malloc(nmemb *size);
+	Carr = malloc(nmemb * size);
 	Iarr = malloc(nmemb * size);
 	if (Iarr == NULL || Carr == NULL)
 		return (NULL);
