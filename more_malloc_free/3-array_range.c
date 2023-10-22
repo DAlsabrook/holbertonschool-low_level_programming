@@ -1,8 +1,10 @@
 #include "main.h"
 /**
+ * array_range - set an array to a range of numbers given
+ * @min: lowest number of range
+ * @max: highest number of range
  *
- *
- * Return:
+ * Return: int* to the array made
  */
 int *array_range(int min, int max)
 {
