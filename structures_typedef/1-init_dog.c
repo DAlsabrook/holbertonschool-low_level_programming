@@ -1,6 +1,6 @@
 #include "dog.h"
 /**
- * init_dog
+ * init_dog - making a dog
  * @d: dog
  * @name: dog name
  * @age: dog age
