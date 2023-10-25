@@ -10,5 +10,5 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-struct dog d = {.name = "scruffy", .age = 18, .owner = "Tim"};
+struct dog = {.name = "scruffy", .age = 18, .owner = "Tim"};
 }
