@@ -2,6 +2,7 @@
 /**
  * print_name - prints a name
  * @name: Name to print
+ * @f: function being passed in
  *
  * Return: void
  */
