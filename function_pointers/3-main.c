@@ -7,7 +7,6 @@
 int main(int argc, char *argv[])
 {
 	int num1, num2, result;
-	int op;
 	op_t calc;
 
 	if (argc != 4)
@@ -18,7 +17,6 @@ int main(int argc, char *argv[])
 
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
-	op = atoi(argv[2]);
 
 	if (*argv[2] == '%' && num2 == 0)
 	{
