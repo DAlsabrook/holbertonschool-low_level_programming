@@ -9,12 +9,10 @@ int main(int argc, char *argv[])
 	int num1, num2, result;
 	char *op;
 	op_t calc;
-	int *funcAddress;
 
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 	op = argv[2];
-	funcAddress = get_op_func(op);
 
 	if (argc != 3)
 	{
@@ -26,13 +24,13 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return(100);
 	}
-	if (funcAddress == NULL)
+	if (get_op_func(op) == NULL)
 	{
-		printf("Error\n")
+		printf("Error\n");
 		return(99);
 	}
 
-	calc.f = funcAddress;
+	calc.f = get_op_func(op);
 	result = calc.f(num1, num2);
 	printf("%d\n", result);
 
