@@ -24,13 +24,13 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return(100);
 	}
-	if (get_op_func(op) == NULL)
+	if (get_op_func(argv[2]) == NULL)
 	{
 		printf("Error\n");
 		return(99);
 	}
 
-	calc.f = get_op_func(op);
+	calc.f = get_op_func(argv[2]);
 	result = calc.f(num1, num2);
 	printf("%d\n", result);
 
