@@ -7,7 +7,6 @@
 int main(int argc, char *argv[])
 {
 	int num1, num2, result;
-	op_t calc;
 
 	if (argc != 4)
         {
@@ -29,9 +28,7 @@ int main(int argc, char *argv[])
 		return(99);
 	}
 
-	calc.f = get_op_func(argv[2]);
-	result = calc.f(num1, num2);
-	printf("%d\n", result);
+	printf("%d\n", get_op_func(argv[2])(num1, num2));
 
 	return (0);
 }
