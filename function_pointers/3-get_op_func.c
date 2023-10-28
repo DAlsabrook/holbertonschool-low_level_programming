@@ -17,5 +17,13 @@ int (*get_op_func(char *s))(int, int)
     };
     int i;
 
-	if (s != ops[0][1] || s != ops[1][1] || s != ops[2][1] || s != ops[3][1] || s != ops[4][1])
+	while (i < 5)
+	{
+		if (s == ops[i][0])
+		{
+			return(ops[i][1]);
+		}
+		i++;
+	}
+	return (NULL);
 }
