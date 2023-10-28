@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	num2 = atoi(argv[3]);
 	op = atoi(argv[2]);
 
-	if ((op == ('/' + '0') || op == ('%' + '0')) && num2 == 48)
+	if ((op == 47 || op == 37) && num2 == 48)
 	{
 		printf("Error\n");
 		return(100);
