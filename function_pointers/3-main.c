@@ -6,8 +6,9 @@
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2;
+	int num1, num2, ans;
 	int (*res)(int, int);
+
 	if (argc != 4)
         {
                 printf("Error\n");
@@ -29,8 +30,8 @@ int main(int argc, char *argv[])
 	}
 
 	res = get_op_func(argv[2]);
-
-	printf("%d\n", res(num1, num2));
+	ans = res(num1, num2);
+	printf("%d\n", ans);
 
 	return (0);
 }
