@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
 
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
+	res = get_op_func(argv[2]);
 
 	if ((*argv[2] == '%' || *argv[2] == '/') && num2 == 0)
 	{
@@ -29,7 +30,6 @@ int main(int argc, char *argv[])
 		return(99);
 	}
 
-	res = get_op_func(argv[2]);
 	ans = res(num1, num2);
 	printf("%d\n", ans);
 
