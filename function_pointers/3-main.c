@@ -28,9 +28,9 @@ int main(int argc, char *argv[])
 		return(99);
 	}
 
-	res = get_op_func(argv[2])(num1, num2);
+	res = get_op_func(argv[2]);
 
-	printf("%d\n", res);
+	printf("%d\n", res(num1, num2));
 
 	return (0);
 }
