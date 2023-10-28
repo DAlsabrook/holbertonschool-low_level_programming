@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return(100);
 	}
-	if (get_op_func(argv[2]) == NULL)
+	if (res == NULL)
 	{
 		printf("Error\n");
 		return(99);
