@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return(98);
 	}
-	if ((op == '/' || op == '%') && num2 == 0)
+	if ((op == ('/' + '0') || op == ('%' + '0')) && num2 == 48)
 	{
 		printf("Error\n");
 		return(100);
