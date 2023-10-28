@@ -1,6 +1,7 @@
 #ifndef CALCY
 #define CALCY
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * struct op - Struct op
  *
