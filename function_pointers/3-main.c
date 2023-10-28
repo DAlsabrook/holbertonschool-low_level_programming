@@ -19,18 +19,18 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return(98);
 	}
-	if ((op == "/" || op == "%") && num2 == 0)
+	if ((*op == "/" || *op == "%") && num2 == 0)
 	{
 		printf("Error\n");
 		return(100);
 	}
-	if (get_op_func(op) == NULL)
+	if (get_op_func(*op) == NULL)
 	{
 		printf("Error\n");
 		return(99);
 	}
 
-	calc.f = get_op_func(op);
+	calc.f = get_op_func(*op);
 	result = calc.f(num1, num2);
 	printf("%d\n", result);
 
