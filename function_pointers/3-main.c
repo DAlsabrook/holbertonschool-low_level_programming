@@ -10,15 +10,16 @@ int main(int argc, char *argv[])
 	int op;
 	op_t calc;
 
+	if (argc != 4)
+        {
+                printf("Error\n");
+                return(98);
+        }
+
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 	op = atoi(argv[2]);
 
-	if (argc < 4)
-	{
-		printf("Error\n");
-		return(98);
-	}
 	if ((op == ('/' + '0') || op == ('%' + '0')) && num2 == 48)
 	{
 		printf("Error\n");
