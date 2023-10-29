@@ -18,7 +18,7 @@ void print_all(const char * const format, ...)
     int isStringNull;
 	
     j = 0;
-    while ((c = *format[j]) != '\0') {
+    while ((c = format[j]) != '\0') {
         if (c == 'c') {
             i = va_arg(args, int);
             printf("%c ", i);
