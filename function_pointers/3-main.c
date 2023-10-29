@@ -1,13 +1,15 @@
 #include "3-calc.h"
 /**
  * main - injection point
+ * @argc: count of arguments
+ * @argv: array of arguments
  *
  * Return: int
  */
 int main(int argc, char *argv[])
 {
 	int num1, num2, ans;
-	int (*res)(int, int);
+	op_t *obj;
 
 	if (argc != 4)
 	{
@@ -17,7 +19,7 @@ int main(int argc, char *argv[])
 
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
-	res = get_op_func(argv[2]);
+	obj->f = get_op_func(argv[2]);
 
 	if ((*argv[2] == '%' || *argv[2] == '/') && num2 == 0)
 	{
@@ -30,7 +32,7 @@ int main(int argc, char *argv[])
 		return (99);
 	}
 
-	ans = res(num1, num2);
+	ans = obj->f(num1, num2);
 	printf("%d\n", ans);
 
 	return (0);
