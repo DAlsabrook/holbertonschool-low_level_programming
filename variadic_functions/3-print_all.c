@@ -8,15 +8,13 @@
 void print_all(const char * const format, ...)
 {
     va_list args;
-    va_start(args, format);
-	
     int j;
     char c;
     int i;
     float f;
     char *s;
     int isStringNull;
-	
+	va_start(args, format);
     j = 0;
     while ((c = format[j]) != '\0') {
         if (c == 'c') {
