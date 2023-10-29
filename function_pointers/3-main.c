@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (100);
 	}
-	if (res == NULL)
+	if (obj->f == NULL)
 	{
 		printf("Error\n");
 		return (99);
