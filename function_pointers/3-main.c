@@ -10,10 +10,10 @@ int main(int argc, char *argv[])
 	int (*res)(int, int);
 
 	if (argc != 4)
-        {
-                printf("Error\n");
-                return(98);
-        }
+	{
+		printf("Error\n");
+		return(98);
+	}
 
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
@@ -22,12 +22,12 @@ int main(int argc, char *argv[])
 	if ((*argv[2] == '%' || *argv[2] == '/') && num2 == 0)
 	{
 		printf("Error\n");
-		return(100);
+		return (100);
 	}
 	if (res == NULL)
 	{
 		printf("Error\n");
-		return(99);
+		return (99);
 	}
 
 	ans = res(num1, num2);
