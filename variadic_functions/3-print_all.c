@@ -9,14 +9,16 @@ void print_all(const char * const format, ...)
 {
     va_list args;
     va_start(args, format);
-
+	
+    int j;
     char c;
     int i;
     float f;
     char *s;
     int isStringNull;
-
-    while ((c = *format++) != '\0') {
+	
+    j = 0;
+    while ((c = *format[j]) != '\0') {
         if (c == 'c') {
             i = va_arg(args, int);
             printf("%c ", i);
@@ -38,6 +40,7 @@ void print_all(const char * const format, ...)
                 printf("%s ", s);
             }
         }
+	j++;
     }
 
     printf("\n");
