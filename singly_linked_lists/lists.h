@@ -1,5 +1,8 @@
 #ifndef LINKED
 #define LINKED
+#include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 typdef struct list_s{
 	char *str;
