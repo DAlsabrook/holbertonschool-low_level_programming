@@ -7,5 +7,11 @@
  */
 size_t print_list(const list_t *h)
 {
+	int count;
 
+	while (h)
+	{
+		printf("%s", h.str)
+		count++;
+	}
 }
