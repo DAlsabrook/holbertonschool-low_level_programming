@@ -9,9 +9,9 @@ size_t print_list(const list_t *h)
 {
 	list_t curr = h;
 
-	while (curr)
+	while (curr != NULL)
 	{
-		printf("[%d] %s", curr->len curr->str)
+		printf("[%d] %s", curr->len, curr->str)
 		curr = curr->next;
 	}
 
