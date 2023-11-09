@@ -1,13 +1,13 @@
 #include "lists.h"
 /**
  * print_list - prints all of the elements of a list
- * @h: list to print
+ * @h: lists_t list to print
  * 
  * Return: number of nodes
  */
 size_t print_list(const list_t *h)
 {
-	while (h != NULL)
+	while (h->next != NULL)
 	{
 		if (h->str != NULL)
 		{
