@@ -3,7 +3,7 @@
  * add_node_end - adds a node to the end of list
  * @head: head of linked list
  * @str: string to duplicat into list
- * 
+ *
  * Return: Addres of new node
 */
 list_t *add_node_end(list_t **head, const char *str)
@@ -14,7 +14,6 @@ list_t *add_node_end(list_t **head, const char *str)
 	new_node = malloc(sizeof(list_t));
 	if (new_node == NULL)
 		return (NULL);
-	
 	new_node->str = strdup(str);
 	current = *head;
 	while (current != NULL)
@@ -23,5 +22,5 @@ list_t *add_node_end(list_t **head, const char *str)
 		current = current->next;
 	}
 	new_node->next = NULL;
-	return(new_node);
+	return (new_node);
 }
