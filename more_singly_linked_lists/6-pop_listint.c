@@ -2,13 +2,15 @@
 /**
  * pop_listint - deleted head
  * @head: list
- * 
+ *
  * Return: data from deleted head
 */
 int pop_listint(listint_t **head)
 {
 	listint_t *current = NULL;
 
+	if(!head)
+		return(0);
 	current->n = (*head)->n;
 	free(*head);
 	*head = (*head)->next;
