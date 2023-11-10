@@ -13,12 +13,9 @@ int pop_listint(listint_t **head)
 	if(!head || !*head)
 		return(0);
 	i = (*head)->n;
-	while (*head)
-	{
-		tmp_l = (*head)->next;
-		free(*head);
-		*head = tmp_l;
-	}
+	tmp_l = (*head)->next;
+	free(*head);
+	*head = tmp_l;
 
 	return (i);
 }
