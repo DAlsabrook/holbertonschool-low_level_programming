@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * get_node_at_index - get node at nth index
+ * get_nodeint_at_index - get node at nth index
  * @index: the index starting at 0
  * @head: list to check
  *
@@ -9,14 +9,13 @@
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	listint_t *current = NULL;
-	unsigned int i;
+	unsigned int i = 0;
 
 	current = head;
-	for (i = 0; i <= index; i++)
+	while (current && i <= index)
 	{
-		if (!current)
-			return (NULL);
 		current = current->next;
+		i++;
 	}
 
 	return (current);
