@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * delete_nodeint_at_intdex - deletes node and index
+ * delete_nodeint_at_index - deletes node and index
  * @head: list to use
  * @index: index to delete
  *
@@ -15,7 +15,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	temp = malloc(sizeof(*temp));
 	if (!temp || !current)
 		return (-1);
-	for (i = 0; i <= index; i++)
+	for (i = 0; i < index; i++)
 	{
 		if (i == index)
 		{
