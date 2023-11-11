@@ -2,7 +2,7 @@
 /**
  * sum_listint - list sum of data from all nodes
  * @head: list to check
- * 
+ *
  * Return: sum of data
 */
 int sum_listint(listint_t *head)
