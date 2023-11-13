@@ -13,7 +13,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	for (counter = 0; diff; counter++)
 	{
-		diff &= (diff - 1)
+		diff &= (diff - 1);
 	}
 	return (counter);
 }
