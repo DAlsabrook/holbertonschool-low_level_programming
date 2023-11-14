@@ -45,7 +45,7 @@ void close_file(int fd)
  * @s: string passed in to determine which error
  * @arg: arguments from main used in message
  * @buffer: pointer to the buffer used in main
- * 
+ *
  * Return: int value used for error reporting
 */
 int error(char s, char *arg, char *buffer)
@@ -56,12 +56,10 @@ int error(char s, char *arg, char *buffer)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", arg);
 			free(buffer);
 			return (99);
-			break;
 		case 'r':
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", arg);
 			free(buffer);
 			return (98);
-			break;
 	}
 	return (0);
 }
@@ -71,7 +69,7 @@ int error(char s, char *arg, char *buffer)
  * file given in argv
  * @argc: count of args
  * @argv: array storing arguments given
- * 
+ *
  * Return: 0 on success
 */
 int main(int argc, char *argv[])
@@ -90,8 +88,7 @@ int main(int argc, char *argv[])
 	r = read(from, buffer, 1024);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
-	do
-	{
+	do {
 		if (from == -1 || r == -1)
 		{
 			exit(error('r', argv[1], buffer));
