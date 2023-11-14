@@ -63,6 +63,7 @@ int error(char s, char *arg, char *buffer)
 			return (98);
 			break;
 	}
+	return (0);
 }
 /**
  * 
