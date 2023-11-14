@@ -16,12 +16,18 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buff = malloc(sizeof(char) * letters + 1);
 	if (!buff)
 		return (0);
-	if ((o = open(filename, O_RDONLY)) == -1)
+	o = open(filename, O_RDONLY);
+	r = read(o, buff, letters);
+	w = write(1, buff, r);
+	if ((check(o) + check(r) + check(w)) < 0)
 		return (0);
-	if ((r = read(o, buff, letters)) == -1)
-		return (0);
-	if ((w = write(1, buff, r)) == -1)
-		return(0);
 	close(o);
 	return (w);
+}
+
+int check(int var)
+{
+	if (var = -1)
+		return (-1);
+	return (0);
 }
