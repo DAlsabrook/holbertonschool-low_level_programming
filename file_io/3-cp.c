@@ -87,21 +87,23 @@ int main(int argc, char *argv[])
 	r = read(from, buffer, 1024);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
-
-	if (from == -1 || r == -1)
+	do
 	{
-		exit(error('r', argv[1], buffer));
-	}
+		if (from == -1 || r == -1)
+		{
+			exit(error('r', argv[1], buffer));
+		}
 
-	w = write(to, buffer, r);
-	if (to == -1 || w == -1)
-	{
-		exit(error('w', argv[2], buffer));
-	}
+		w = write(to, buffer, r);
+		if (to == -1 || w == -1)
+		{
+			exit(error('w', argv[2], buffer));
+		}
 
-	r = read(from, buffer, 1024);
-	to = open(argv[2], O_WRONLY | O_APPEND);
-
+		r = read(from, buffer, 1024);
+		to = open(argv[2], O_WRONLY | O_APPEND);
+	} while (r > 0);
+	
 	free(buffer);
 	close_file(from);
 	close_file(to);
