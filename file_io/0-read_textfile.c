@@ -24,7 +24,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	close(o);
 	return (w);
 }
-
+/**
+ * check - checks for errors
+ * @var: variable passed in
+ *
+ * Return: -1 when error found. 0 when no error.
+ */
 int check(int var)
 {
 	if (var == -1)
