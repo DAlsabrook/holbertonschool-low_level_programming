@@ -5,7 +5,7 @@
  * @letters: number of letter expected
  *
  * Return: number of letters printed
-*/
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t o, r, w;
