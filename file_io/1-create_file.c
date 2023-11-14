@@ -17,10 +17,10 @@ int create_file(const char *filename, char *text_content)
 			len++;
 		}
 	}
-	o = open(filename, O_CREAT, O_RDWR, O_TRUNC);
+	o = open(filename, O_CREAT | O_RDWR | O_TRUNC);
 	w = write(o, text_content, len);
 	if (o == -1 || w == -1)
 		return (-1);
 	close(o);
-	return(w);
+	return(1);
 }
