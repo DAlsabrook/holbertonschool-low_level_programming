@@ -8,19 +8,20 @@
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int file_num;
-	ssize_t file;
-	char buff[letters];
+	ssize_t o, r, w;
+	char *buff;
 
-	file_num = open(filename, O_RDONLY);
-	if (file_num == -1)
+	if (filename == NULL)
+		return (NULL);
+	buff = malloc(sizeof(letters));
+	if (!buff)
 		return (0);
-	file = read(file_num, buff ,letters);
-	if (file == -1)
-		return (-1);
-	if (write(1, buff, file) != file)
-		return (-1);
-
-	close(file_num);
-	return (file);
+	if (o = open(filename, O_RDONLY) == -1)
+		return (0);
+	if (r = read(o, buff, letters) == -1)
+		return (0);
+	if (w = write(1, buff, r) == -1)
+		return(0);
+	close(o);
+	return (w);
 }
