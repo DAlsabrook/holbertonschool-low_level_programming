@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
  * insert_dnodeint_at_index - add node at a given position
- * @head: list to use
+ * @h: list to use
  * @idx: index to place node
  * @n: data for new node
  *
@@ -10,7 +10,7 @@
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new, *tmp, *current;
-	unsigned int i = 1;
+	unsigned int i = 0;
 	/*create new node*/
 	new = malloc(sizeof(dlistint_t));
 	if (!new)
