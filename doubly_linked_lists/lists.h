@@ -3,6 +3,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * struct dlistint_s - struct for list
+ *
+ * @n: int
+ * @prev: pointer to prev node
+ * @next: pointer to next node
+ */
+typedef struct dlistint_s
+{
+	int n;
+	struct dlist_s *prev;
+	struct dlist_s *next;
+} dlistint_t
+
 
 size_t print_dlistint(const dlistint_t *h);
 size_t dlistint_len(const dlistint_t *h);
