@@ -3,7 +3,7 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${default}"
             ],
             "defines": [
                 "_DEBUG",
@@ -11,10 +11,7 @@
                 "_UNICODE"
             ],
             "compilerPath": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/Hostx64/x64/cl.exe",
-            "intelliSenseMode": "windows-msvc-x64",
-            "compilerArgs": [
-                "${workspaceRoot}/**"
-            ]
+            "intelliSenseMode": "windows-msvc-x64"
         }
     ],
     "version": 4
