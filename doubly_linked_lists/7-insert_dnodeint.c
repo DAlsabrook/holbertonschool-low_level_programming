@@ -31,15 +31,16 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		*h = new;
 		return (new);
 	}
-	/*logic to set the new node at an index*/
+	/*loop to get to correct node*/
 	current = *h;
-	while (current->next && i < idx)
+	while (current->next && i < (idx - 1))
 	{
 		current = current->next;
 		i++;
 	}
-	if (i < idx)
+	if (i < idx) /*if idx is out of range*/
 		return (NULL);
+	/*set new node pointers*/
 	tmp = current;
 	current = current->next;
 	tmp->next = new;
