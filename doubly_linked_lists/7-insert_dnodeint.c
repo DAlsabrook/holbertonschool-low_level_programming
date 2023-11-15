@@ -17,19 +17,19 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (NULL);
 	new->n = n;
 
-	//if list is empty set head to new
+	/*if list is empty set head to new*/
 	if (!*h)
 	{
 		*h = new;
 		return (new);
 	}
-	//if index is 0
+	/*if index is 0*/
 	if (idx == 0)
 	{
 		new->next = *h;
 		return (new);
 	}
-	// logic to set the new node at an index
+	/*logic to set the new node at an index*/
 	current = *h;
 	while (current->next && i < idx)
 	{
