@@ -42,12 +42,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		item->next = current_item;
 	}
-	if (strcmp(key, current_item->key) == 0)
-	{
-		free(current_item->value);
-		free(current_item->key);
-		free(current_item);
-	}
-
 	return (1);
 }
