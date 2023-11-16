@@ -34,22 +34,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	}
 	strcpy(item->key, key);
-	if (!item->key)
-		free(item->key);
 	strcpy(item->value, value);
-	if (!item->value)
-		free(item->value);
 	index = key_index((const unsigned char *)key, table->size);
 	current_item = table->array[index];
 	table->array[index] = item;
 	if (current_item && strcmp(key, current_item->key) != 0)
 	{
 		item->next = current_item;
-	}
-	if (strcmp(key, current_item->key) == 0)
-	{
-		free(current_item->value);
-		free(current_item);
 	}
 
 	return (1);
