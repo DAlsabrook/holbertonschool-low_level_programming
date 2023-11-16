@@ -30,5 +30,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		table->array[index] = item;
 	}
+	else
+	{
+		curren_item->next = item;
+	}
 	return (1);
 }
