@@ -32,7 +32,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else
 	{
-		curren_item->next = item;
+		item->next = current_item;
 	}
 	return (1);
 }
