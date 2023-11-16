@@ -16,8 +16,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	item = malloc(sizeof(hash_node_t));
 	item->key = malloc(strlen(key) + 1);
 	item->value = malloc(strlen(value) + 1);
-	if (!item || !item->value || !item->key)
+	if (!table || !item || !item->value || !item->key)
+	{
+		free(item);
+		free(item->key);
+		free(item->value)
 		return (0);
+	}
 	/*assign item values*/
 	strcpy(item->key, key);
 	strcpy(item->value, value);
