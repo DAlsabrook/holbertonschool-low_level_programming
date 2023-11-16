@@ -11,15 +11,13 @@ void hash_table_print(const hash_table_t *ht)
 	if (!ht)
 		return;
 	putchar('{');
-	for (row = 0; row < ht->size; row++)
+	for (row = 0; row < ht->size - 1; row++)
 	{
 		current = ht->array[row];
 		while (current)
 		{
-			printf("'%s': '%s'", current->key, current->value);
+			printf("'%s': '%s', ", current->key, current->value);
 			current = current->next;
-			if (current && row == ht->size - 1)
-				printf(", ");
 		}
 	}
 	putchar('}');
