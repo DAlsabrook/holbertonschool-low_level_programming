@@ -28,10 +28,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	strcpy(item->value, value);
 	/*get index with key*/
 	index = key_index((const unsigned char *)key, table->size);
-
-	current_item = table->array[index];
 	table->array[index] = item;
-	if (current_item)
+	current_item = table->array[index];
+	if (current_item && current_item->key != (char*)key)
 	{
 		item->next = current_item;
 	}
