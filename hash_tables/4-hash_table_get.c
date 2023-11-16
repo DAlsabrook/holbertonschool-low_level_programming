@@ -16,9 +16,13 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	for (row = 0; row < ht->size; row++)
 	{
 		current = ht->array[row];
-		if (current && strcmp((char *)key, current->key) == 0)
+		while (current)
 		{
-			return (current->value);
+			if (strcmp((char *)key, current->key) == 0)
+			{
+				return (current->value);
+			}
+			current = current->next
 		}
 	}
 	return (NULL);
