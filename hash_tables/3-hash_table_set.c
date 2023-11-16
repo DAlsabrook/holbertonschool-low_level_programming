@@ -11,7 +11,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *item, *current_item;
 	hash_table_t *table = ht;
-	unsigned long int i, index;
+	unsigned long int index;
 	/*create item and allocate memory for item and values inside item*/
 	item = malloc(sizeof(hash_node_t));
 	item->key = malloc(strlen(key) + 1);
