@@ -12,11 +12,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *item, *current_item;
 	hash_table_t *table = ht;
 	unsigned long int index;
+
+	if(!ht || !key || *key == '\0' || !value)
+		return (0);
 	/*create item and allocate memory for item and values inside item*/
 	item = malloc(sizeof(hash_node_t));
 	item->key = malloc(strlen(key) + 1);
 	item->value = malloc(strlen(value) + 1);
-	if (!table || !item || !item->value || !item->key)
+	if (!item || !item->value || !item->key)
 	{
 		free(item);
 		return (0);
@@ -26,7 +29,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	strcpy(item->value, value);
 	/*get index with key*/
 	index = key_index((const unsigned char *)key, table->size);
-	/*check if index has an item and if so move it over in the array at same index*/
+	/*check if index has an item and if so move it over in the array*/
 	current_item = table->array[index];
 	table->array[index] = item;
 	if (current_item && strcmp(key, current_item->key) != 0)
