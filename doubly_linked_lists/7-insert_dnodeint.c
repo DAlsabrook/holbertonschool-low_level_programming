@@ -41,7 +41,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		i++;
 	}
 	/*set new node pointers*/
-	if(!current->next)
+	if(current->next)
 	{
 		tmp = current->next;
 		current->next = new;
