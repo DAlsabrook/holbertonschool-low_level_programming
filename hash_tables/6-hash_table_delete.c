@@ -2,7 +2,7 @@
 /**
  * hash_table_delete - deletes a hash table
  * @ht: table to use
- * 
+ *
  * Return: void
  */
 void hash_table_delete(hash_table_t *ht)
@@ -13,16 +13,22 @@ void hash_table_delete(hash_table_t *ht)
 	/*loop through table rows*/
 	for (row = 0; row < ht->size; row++)
 	{
-		node = ht->array[row];
-		while (node)
+		/*check if row is there*/
+		if (ht->array[row])
 		{
-			tmp = node->next;
-			free(node->key);
-			free(node->value);
-			free(node);
-			node = tmp;
+			node = ht->array[row];
+			/*loop through rows nodes and free*/
+			while (node)
+			{
+				tmp = node->next;
+				free(node->key);
+				free(node->value);
+				free(node);
+				node = tmp;
+			}
 		}
 	}
+	/*free the **array and the table*/
 	free(table->array);
 	free(table);
 }
