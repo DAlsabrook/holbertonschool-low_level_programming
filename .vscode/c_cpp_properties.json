@@ -10,8 +10,8 @@
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/Hostx64/x64/cl.exe",
-            "intelliSenseMode": "windows-msvc-x64"
+            "compilerPath": "C:\\msys64\\ucrt64\\bin\\gcc.exe",
+            "intelliSenseMode": "clang-x64"
         }
     ],
     "version": 4
