@@ -25,12 +25,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	index = key_index((const unsigned char *)key, table->size);
 
 	current_item = table->array[index];
-
-	if (!current_item)
-	{
-		table->array[index] = item;
-	}
-	else
+	table->array[index] = item;
+	if (current_item)
 	{
 		item->next = current_item;
 	}
