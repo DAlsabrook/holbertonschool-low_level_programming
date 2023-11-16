@@ -25,11 +25,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	strcpy(item->value, value);
 	/*get index with key*/
 	index = key_index((const unsigned char *)key, table->size);
+	/*check if index has an item and if so move it over in the array at same index*/
 	current_item = table->array[index];
 	table->array[index] = item;
 	if (current_item && strcmp(key, current_item->key) != 0)
 	{
 		item->next = current_item;
 	}
+	free(current_item);
 	return (1);
 }
