@@ -18,9 +18,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	item->value = malloc(strlen(value) + 1);
 	if (!table || !item || !item->value || !item->key)
 	{
-		free(item);
-		free(item->key);
-		free(item->value);
 		return (0);
 	}
 	/*assign item values*/
