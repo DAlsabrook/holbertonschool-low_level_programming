@@ -37,7 +37,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	strcpy(item->value, value);
 	index = key_index((const unsigned char *)key, table->size);
 	current_item = table->array[index];
-	table->array[index] = item;
 	if (current_item && strcmp(key, current_item->key) != 0)
 	{
 		strcpy(current_item->value, value);
