@@ -40,7 +40,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	table->array[index] = item;
 	if (current_item && strcmp(key, current_item->key) != 0)
 	{
-		current_item->value = value;
+		strcpy(current_item->value, value);
 		free(item);
 	}
 	else
