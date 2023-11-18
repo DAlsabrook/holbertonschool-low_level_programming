@@ -40,6 +40,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (current_item && strcmp(key, current_item->key) != 0)
 	{
 		strcpy(current_item->value, value);
+		free(item->value);
+		free(item->key);
 		free(item);
 	}
 	else
