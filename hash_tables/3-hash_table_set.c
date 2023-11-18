@@ -37,6 +37,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	strcpy(item->value, value);
 	index = key_index((const unsigned char *)key, table->size);
 	current_item = table->array[index];
+	/*if there is an item in array and keys match*/
 	if (current_item && strcmp(key, current_item->key) != 0)
 	{
 		strcpy(current_item->value, value);
@@ -44,9 +45,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		free(item->key);
 		free(item);
 	}
+	/*maybe an item but points array to item and next to current*/
 	else
 	{
 		table->array[index] = item;
+		item->next = current_item;
 	}
 	return (1);
 }
