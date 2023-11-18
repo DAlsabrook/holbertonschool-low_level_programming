@@ -15,6 +15,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (!ht || !key || *key == '\0' || !value)
 		return (0);
+	/*create new item, value, and key. Then set those values*/
 	item = malloc(sizeof(hash_node_t));
 	if (!item)
 	{
@@ -35,9 +36,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	strcpy(item->key, key);
 	strcpy(item->value, value);
+	/*find key index and set current to that index*/
 	index = key_index((const unsigned char *)key, table->size);
 	current_item = table->array[index];
-	/*if there is an item in array and keys match*/
+	/*if there is an item in array and keys match. Changes current item value*/
 	if (current_item && strcmp(key, current_item->key) != 0)
 	{
 		strcpy(current_item->value, value);
@@ -45,7 +47,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		free(item->key);
 		free(item);
 	}
-	/*maybe an item but points array to item and next to current*/
+	/*maybe an item but points array to new item and next to current*/
 	else
 	{
 		table->array[index] = item;
