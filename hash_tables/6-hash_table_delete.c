@@ -13,7 +13,7 @@ void hash_table_delete(hash_table_t *ht)
 	/*loop through table rows*/
 	while (row < ht->size)
 	{
-		/*check is row is null*/
+		/*check if row is null*/
 		while (ht->array[row])
 		{
 			node = ht->array[row]->next;
