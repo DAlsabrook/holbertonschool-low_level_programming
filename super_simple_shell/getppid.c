@@ -2,6 +2,11 @@
 
 int main(void)
 {
-	printf("PID: %d\n", getpid());
-	printf("PPID: %d\n", getppid());
+	pid_t pid;
+	
+	pid = getpid();
+	printf("PID: %d", pid);
+
+	return (0);
 }
+
