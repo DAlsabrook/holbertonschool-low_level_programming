@@ -5,7 +5,7 @@ int main(void)
 	pid_t pid;
 	
 	pid = getpid();
-	printf("PID: %d", pid);
+	printf("PID: %d\n", pid);
 
 	return (0);
 }
