@@ -15,14 +15,14 @@ int binary_search(int *array, size_t size, int value)
 		return (-1);
 	while (l <= r)
 	{
+		printf("Searching in array: ");
+		print_array(array, l, r);
 		mid = l + (r - l) / 2;
 		/*value found*/
 		if (value == array[mid])
 		{
 			return (mid);
 		}
-		printf("Searching in array: ");
-		print_array(array, l, r);
 		/*case to go right*/
 		if (array[mid] < value)
 		{
@@ -36,4 +36,23 @@ int binary_search(int *array, size_t size, int value)
 		
 	}
 	return (-1);
+}
+
+/**
+ * print_array - Prints an array of integers
+ *
+ * @start: elemnt to start printing
+ * @array: The array to be printed
+ * @end: Number of elements in @array
+ */
+void print_array(const int *array, int start, int end)
+{
+	while (array && start < end)
+	{
+		if (start > 0)
+			printf(", ");
+		printf("%d", array[start]);
+		++start;
+	}
+	printf("\n");
 }
